@@ -14,7 +14,8 @@ import CardOneComponent from '../components/CardOneComponent';
 import HorizontalComponent from '../components/HorizontalComponent';
 
 import { WIDTH, MOCK_DATA } from '../../../configuration/Values';
-import { BASE_COLOR_BACKGROUND } from '../../../configuration/Colors';
+
+import { mainContainer } from '../styles';
 
 type Props = {};
 export default class PostListContainer extends Component<Props> {
@@ -66,7 +67,7 @@ export default class PostListContainer extends Component<Props> {
     // console.warn(BASE_COLOR);
     return (
       <FlatList
-        contentContainerStyle={s.flatList}
+        contentContainerStyle={mainContainer.flatList}
         data={this.state.data}
         extraData={this.state}
         renderItem={({ item,index }) => (index+1)%7==0 ? (
@@ -84,12 +85,3 @@ export default class PostListContainer extends Component<Props> {
     );
   }
 }
-
-const s = StyleSheet.create({
-  flatList:{
-    flexGrow:1,
-    paddingTop:10,
-    paddingBottom:10,
-    backgroundColor: BASE_COLOR_BACKGROUND
-  }
-});
