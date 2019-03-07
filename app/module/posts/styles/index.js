@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { WIDTH } from '../../../configuration/Values';
 import { BASE_COLOR_BACKGROUND, TITLE_COLOR, BASE_COLOR_BORDER } from '../../../configuration/Colors';
 
-export const mainContainer = StyleSheet.create({
+export const postList = StyleSheet.create({
   flatList:{
     flexGrow:1,
     paddingTop:10,

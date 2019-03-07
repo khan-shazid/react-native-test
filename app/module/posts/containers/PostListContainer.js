@@ -15,7 +15,7 @@ import HorizontalComponent from '../components/HorizontalComponent';
 
 import { WIDTH, MOCK_DATA } from '../../../configuration/Values';
 
-import { mainContainer } from '../styles';
+import { postList } from '../styles';
 
 type Props = {};
 export default class PostListContainer extends Component<Props> {
@@ -67,7 +67,7 @@ export default class PostListContainer extends Component<Props> {
     // console.warn(BASE_COLOR);
     return (
       <FlatList
-        contentContainerStyle={mainContainer.flatList}
+        contentContainerStyle={postList.flatList}
         data={this.state.data}
         extraData={this.state}
         renderItem={({ item,index }) => (index+1)%7==0 ? (
